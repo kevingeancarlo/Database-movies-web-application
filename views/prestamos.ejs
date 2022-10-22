@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style_login_register.css">
+    <title>Sección PRESTAMOS</title>
+</head>
+<body>
+    <div class="register-form">
+        <h1> PRESTAMOS </h1>
+        <form action="prestamos" method="POST">
+
+
+            <label for="fecha_prestamo" >Fecha del prestamo</label>
+            <input type="date" name="fecha_prestamo" required><br>
+
+            <label for="fecha_entrega" >Fecha de entrega</label>
+            <input type="date" name="fecha_entrega" required><br>
+
+            <label for="fecha_tope" >Fecha tope</label>
+            <input type="date" name="fecha_tope" required><br>
+
+            <!--<label for="cod_cliente" >Cod. Cliente</label>
+            <input type="text" name="cod_cliente" required><br>
+
+             <label for="n_copia" >N. copia</label>
+            <input type="text" name="n_copia" required> -->
+
+            <div style="display: inline;">
+            <a href="/home" class="btn-cancel">Cancel</a><input type="submit" class="btn-save" value="Siguiente">
+            </div>
+        </form>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>',
+                timer: <%= timer %>
+            }).then(()=>{
+                window.location='/<%= ruta %>'
+            })
+        </script>
+        <% } %>
+</body>
+</html>
