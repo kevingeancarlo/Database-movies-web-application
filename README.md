@@ -1,4 +1,3 @@
 # Project-5
  
-Contrucción de una base de datos relacional y desarrollo de una aplicación web que permite
-consultarla y actualizarla mediante una interfaz de usuario.
+Construction of a relational database and development of a web application that allows it to be consulted and updated through a user interface.
